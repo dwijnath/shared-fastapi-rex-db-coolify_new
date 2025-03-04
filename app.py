@@ -57,18 +57,7 @@ app.add_middleware(LargeUploadMiddleware)
 # Simplify CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://tigzig.com",
-        "https://realtime.tigzig.com",
-        "https://rex.tigzig.com",
-        "https://rexdb.tigzig.com",
-        "https://rexrc.tigzig.com",
-        "https://rexc.tigzig.com",
-        "https://mf.tigzig.com",
-        "https://rexdb2.tigzig.com",
-        "http://localhost:8100",   # For local development as per your choice
-        "http://localhost:5100"    # For local development
-    ],
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
